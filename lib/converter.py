@@ -13,12 +13,12 @@ def run():
     price_matrix = pd.read_excel('../src/price_matrix_m.xlsx')
 
     # left join
-    merged_df = price_matrix.merge(residental_complex, how='left', on='ЖК')
-    merged_df.to_excel('../src/data_set.xlsx')
+    # merged_df = price_matrix.merge(residental_complex, how='left', on='ЖК')
+    # merged_df.to_excel('../src/merged_left.xlsx')
 
     # inner join
     merged_inner_df = price_matrix.merge(residental_complex, how='inner', on='ЖК')
-    merged_inner_df.to_excel('../src/merged_inner.xlsx')
+    merged_inner_df.to_excel('../src/dataset.xlsx')
 
     os.remove('../src/price_matrix_m.xlsx')
 
